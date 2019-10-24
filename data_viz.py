@@ -4,17 +4,14 @@ import math_lib
 matplotlib.use('Agg')
 #With helpful permission from Chi-Ju Wu
 
-def boxplot(L, out_file_name):
+def boxplot(par, meta, x_label, y_label, title, out_file):
     """plot boxplot for an input array and save the result as a png file
     """
-    plt.boxplot(L)
+    plt.boxplot(par)
     plt.ylabel('Distribution')
     plt.xlabel('Box')
-    plt.title('mean: ' + str(math_lib.list_mean(L)) + ' ' +
-              'stdev: ' + str(math_lib.list_stdev(L)))
-    plt.savefig(out_file_name)
+    plt.savefig(out_file)
     pass
-
 
 def histogram(L, out_file_name):
     """plot boxplot for an input array and save the result as a png file
