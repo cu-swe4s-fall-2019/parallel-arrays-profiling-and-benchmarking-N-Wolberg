@@ -8,7 +8,7 @@ import argparse
 # parse arguments
 def parse_args():
     parser = argparse.ArgumentParser(
-        description='Takes .',
+        description='Parallel Arrays Handeling.',
         prog='plot_gtex.py')
 
     # require file name as one of the inputs
@@ -45,13 +45,11 @@ def parse_args():
 
 
 def linear_search(key, L):
-    pass
+    for i in range(len(L)):
+        if key == L[i]:
+            return i
+    return -1
 
-def binary_serach(key, L):
-    pass
-
-
-def main():
 
 
 if __name__ == '__main__':
