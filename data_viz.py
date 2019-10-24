@@ -1,9 +1,8 @@
-Learn more or give us feedback
 import matplotlib
 import matplotlib.pyplot as plt
 import math_lib
 matplotlib.use('Agg')
-
+#With helpful permission from Chi-Ju Wu
 
 def boxplot(L, out_file_name):
     """plot boxplot for an input array and save the result as a png file
