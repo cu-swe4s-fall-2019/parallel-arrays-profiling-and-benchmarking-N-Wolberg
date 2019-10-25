@@ -37,6 +37,15 @@ class TestMathLib(unittest.TestCase):
         r = plot_gtex.linear_search(10, L)
         self.assertEqual(r, -1)
 
+    def test_binary_search(self):
+        L = [[1, 0], [2, 1], [3, 2], [4, 3], [5, 4], [6, 5]]
+
+        r = plot_gtex.binary_serach(3, L)
+        self.assertEqual(r, 2)
+
+        r = plot_gtex.binary_serach(10, L)
+        self.assertEqual(r, -1)
+
 
 if __name__ == '__main__':
     unittest.main()

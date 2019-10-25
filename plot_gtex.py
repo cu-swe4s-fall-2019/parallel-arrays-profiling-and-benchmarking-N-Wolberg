@@ -51,6 +51,22 @@ def linear_search(key, L):
     return -1
 
 
+def binary_serach(key, L):
+    lo = 0
+    hi = len(L)-1
+    while (hi > lo):
+        mid = (hi + lo) // 2
+
+        if key == L[mid][0]:
+            return L[mid][1]
+
+        if (key < L[mid][0]):
+            hi = mid - 1
+        else:
+            lo = mid + 1
+
+    return -1
+
 
 if __name__ == '__main__':
     main()
