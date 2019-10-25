@@ -46,3 +46,13 @@ if [ -f "test3.png" ]; then
     echo "test3.png generated successfully"
     rm test3.png
 fi
+
+echo "...bad gene..."
+run bad_gene python3 plot_gtex.py --gene_reads GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.acmg_59.gct.gz --sample_attributes GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt --gene AAAAA --group_type SMTS --output_file test1.png
+assert_exit_code 0
+assert_no_stdout
+
+echo "...bad group type..."
+run bad_group python3 plot_gtex.py --gene_reads GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_reads.acmg_59.gct.gz --sample_attributes GTEx_Analysis_v8_Annotations_SampleAttributesDS.txt --gene ACTA2 --group_type AAAA --output_file test1.png
+assert_exit_code 1
+assert_stdout
