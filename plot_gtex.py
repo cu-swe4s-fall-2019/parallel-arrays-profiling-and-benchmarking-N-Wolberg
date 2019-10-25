@@ -92,6 +92,9 @@ def parse_meta(group, file):
 
         sample_idx = linear_search('SAMPID', metadata_header)
         target_idx = linear_search(group, metadata_header)
+        if target_idx == -1:
+            print('bad group name')
+            sys.exit(1)
         samples.append(sample_info[sample_idx])
         target_group.append(sample_info[target_idx])
     return samples, target_group
