@@ -51,7 +51,16 @@ def linear_search(key, L):
     return -1
 
 
-def binary_serach(key, L):
+def linear_search_all_hits(key, L):
+    """Gives indices not values"""
+    hit = []
+    for i in range(len(L)):
+        if key == L[i]:
+            hit.append(i)
+    return hit
+
+
+def binary_search(key, L):
     lo = 0
     hi = len(L)-1
     while (hi > lo):

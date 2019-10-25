@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math_lib
 matplotlib.use('Agg')
-#With helpful permission from Chi-Ju Wu
+# With helpful permission from Chi-Ju Wu
 
 
 def boxplot(data, meta, x_label, y_label, title, out_file):

@@ -3,6 +3,7 @@ import random
 import math
 import statistics
 import data_viz
+import plot_gtex
 import random
 import numpy as np
 import os
@@ -40,10 +41,10 @@ class TestMathLib(unittest.TestCase):
     def test_binary_search(self):
         L = [[1, 0], [2, 1], [3, 2], [4, 3], [5, 4], [6, 5]]
 
-        r = plot_gtex.binary_serach(3, L)
+        r = plot_gtex.binary_search(3, L)
         self.assertEqual(r, 2)
 
-        r = plot_gtex.binary_serach(10, L)
+        r = plot_gtex.binary_search(10, L)
         self.assertEqual(r, -1)
 
 
